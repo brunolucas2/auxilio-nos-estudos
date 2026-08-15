@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trilha de Estudos — Python, Redes e Banco de Dados</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            background: #e7e7e5;
+            color: #292929;
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+            line-height: 1.7;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        section {
+            background: #f4f4f2;
+            padding: 35px 40px;
+            margin-bottom: 30px;
+            border-radius: 14px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        h1,
+        h2 {
+            color: #202020;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 25px;
+            margin-top: 0;
+            margin-bottom: 24px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #d5d5d2;
+        }
+
+        h3 {
+            color: #333333;
+            font-size: 18px;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin: 7px 0;
+        }
+
+        ul ul {
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        code {
+            background: #dededb;
+            color: #303030;
+            padding: 2px 6px;
+            border-radius: 5px;
+            font-family:
+                "Cascadia Code",
+                "Fira Code",
+                Consolas,
+                monospace;
+            font-size: 0.9em;
+        }
+
+        .optional {
+            margin-top: 15px;
+            padding: 15px 18px;
+            background: #eaeae7;
+            border-left: 4px solid #999999;
+            border-radius: 6px;
+        }
+
+        .challenge {
+            background: #dededb;
+            border-left: 5px solid #555555;
+        }
+
+        .challenge h2 {
+            border-bottom: none;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 12px;
+            }
+
+            section {
+                padding: 25px 22px;
+            }
+
+            h1 {
+                font-size: 27px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <h1>Trilha de Estudos</h1>
+
+        <section>
+            <h2>Python — Básico/Intermediário</h2>
+
+            <ul>
+                <li>Variáveis e tipos</li>
+
+                <li>
+                    Estruturas condicionais
+                    <ul>
+                        <li><code>if</code></li>
+                        <li><code>elif</code></li>
+                        <li><code>else</code></li>
+                    </ul>
+                </li>
+
+                <li>
+                    Estruturas de repetição
+                    <ul>
+                        <li><code>for</code></li>
+                        <li><code>while</code></li>
+                    </ul>
+                </li>
+
+                <li>Funções e escopo de código</li>
+
+                <li>
+                    Estruturas de dados
+                    <ul>
+                        <li>Vetores / Arrays (unidimensionais)</li>
+                        <li>Matrizes (bidimensionais)</li>
+                        <li>Arrays multidimensionais</li>
+                    </ul>
+                </li>
+
+                <li>
+                    Módulos
+                    <ul>
+                        <li>Importação de módulos</li>
+                        <li>Criação de módulos próprios</li>
+                        <li>Conceito básico de bibliotecas</li>
+                    </ul>
+                </li>
+
+                <li>
+                    Tratamento de erros e exceções
+                    <ul>
+                        <li><code>try</code></li>
+                        <li><code>except</code></li>
+                        <li><code>else</code></li>
+                        <li><code>finally</code></li>
+                    </ul>
+                </li>
+
+                <li>Leitura e escrita de arquivos (I/O)</li>
+
+                <li>
+                    Classes e objetos
+                    <ul>
+                        <li>Criar uma classe</li>
+                        <li>Construtor (<code>__init__</code>)</li>
+                        <li>Atributos</li>
+                        <li>Métodos</li>
+                        <li>Entender o que é um objeto</li>
+                    </ul>
+
+                    <div class="optional">
+                        <strong>Aprofundamento opcional:</strong>
+                        os 4 pilares da POO
+                        <ul>
+                            <li>Herança</li>
+                            <li>Encapsulamento</li>
+                            <li>Abstração</li>
+                            <li>Polimorfismo</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>Bibliotecas externas e <code>pip</code></li>
+
+                <li>Ambiente virtual (<code>venv</code>)</li>
+            </ul>
+        </section>
+
+
+        <section>
+            <h2>Básico de Redes para Web e IoT</h2>
+
+            <ul>
+                <li>
+                    Protocolo HTTP
+                    <ul>
+                        <li>O que é HTTP</li>
+                        <li>Requisição (Request)</li>
+                        <li>Resposta (Response)</li>
+                        <li>Headers</li>
+                        <li>Body</li>
+                        <li>URL</li>
+                    </ul>
+                </li>
+
+                <li>
+                    Principais métodos HTTP
+                    <ul>
+                        <li><code>GET</code></li>
+                        <li><code>POST</code></li>
+                        <li><code>PUT</code></li>
+                        <li><code>PATCH</code></li>
+                        <li><code>DELETE</code></li>
+                    </ul>
+                </li>
+
+                <li>
+                    Principais códigos de status HTTP
+                    <ul>
+                        <li><code>200 OK</code></li>
+                        <li><code>201 Created</code></li>
+                        <li><code>400 Bad Request</code></li>
+                        <li><code>401 Unauthorized</code></li>
+                        <li><code>403 Forbidden</code></li>
+                        <li><code>404 Not Found</code></li>
+                        <li><code>500 Internal Server Error</code></li>
+                    </ul>
+                </li>
+
+                <li>
+                    Conceitos básicos de rede para Web e IoT
+                    <ul>
+                        <li>Endereço IP</li>
+                        <li>Portas</li>
+                        <li><code>localhost</code></li>
+                        <li>TCP</li>
+                        <li>UDP</li>
+                        <li>DNS</li>
+                        <li>HTTP vs HTTPS</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+
+        <section class="challenge">
+            <h2>Desafio — Python + Redes</h2>
+
+            <p>
+                Após entender os conceitos básicos de Python e redes, realize o
+                seguinte desafio:
+            </p>
+
+            <ul>
+                <li>Realizar requisições HTTP à <a href="https://pokeapi.co/docs/v2">PokéAPI</a></li>
+                <li>Consumir e interpretar os dados retornados pela API</li>
+                <li>Exibir no console um menu interativo para consultar Pokémon pelo seu número</li>
+            </ul>
+        </section>
+
+
+        <section>
+            <h2>Básico de Banco de Dados e SGBDs</h2>
+
+            <h3>Conceitos fundamentais</h3>
+
+            <ul>
+                <li>O que é um Banco de Dados</li>
+                <li>O que é um SGBD (Sistema de Gerenciamento de Banco de Dados)</li>
+                <li>Diferença entre Banco de Dados e SGBD</li>
+                <li>O que são tabelas</li>
+                <li>Linhas (registros)</li>
+                <li>Colunas (atributos)</li>
+                <li>Chaves primárias e estrangeiras — noção básica</li>
+            </ul>
+
+            <h3>SQL (Structured Query Language)</h3>
+
+            <ul>
+                <li>O que é SQL</li>
+                <li>Para que serve</li>
+                <li>
+                    Como o SQL é utilizado para manipular e estruturar
+                    bancos de dados
+                </li>
+            </ul>
+
+            <h3>Subclassificações do SQL</h3>
+
+            <ul>
+                <li>DQL (Data Query Language)</li>
+                <li>DML (Data Manipulation Language)</li>
+                <li>DDL (Data Definition Language)</li>
+                <li>DCL (Data Control Language)</li>
+                <li>
+                    DTL / TCL
+                    (Data Transaction Language /
+                    Transaction Control Language)
+                </li>
+            </ul>
+
+            <h3>Principais comandos SQL</h3>
+
+            <ul>
+                <li><code>SELECT</code></li>
+                <li><code>INSERT</code></li>
+                <li><code>UPDATE</code></li>
+                <li><code>DELETE</code></li>
+                <li><code>ALTER</code></li>
+                <li><code>CREATE</code></li>
+                <li><code>DROP</code></li>
+            </ul>
+
+            <h3>Criação e estruturação</h3>
+
+            <ul>
+                <li>Criar um banco de dados</li>
+                <li>Criar tabelas</li>
+                <li>Definir colunas e tipos de dados</li>
+                <li>Definir <code>PRIMARY KEY</code></li>
+                <li>Definir <code>FOREIGN KEY</code> — noção básica</li>
+                <li>Alterar a estrutura de uma tabela</li>
+            </ul>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
