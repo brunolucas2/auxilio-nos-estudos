@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INOVA SENAI 2026 — Guia de Inscrição</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #f4f7f6;
+            --surface: #ffffff;
+            --surface-soft: #eef5f2;
+            --text: #26332f;
+            --muted: #66736f;
+            --primary: #24745b;
+            --primary-dark: #185642;
+            --accent: #dff1e9;
+            --warning: #fff2d8;
+            --warning-text: #8a5a00;
+            --danger: #fff0f0;
+            --danger-text: #a33d3d;
+            --border: #dce7e2;
+            --shadow: 0 8px 30px rgba(30, 65, 54, .07);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Inter", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.65;
+        }
+
+        .container {
+            width: min(1100px, 92%);
+            margin: auto;
+        }
+
+        header {
+            padding: 70px 0 55px;
+            background: linear-gradient(135deg, #e8f4ef, #f7faf9);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 7px 13px;
+            border-radius: 999px;
+            background: var(--accent);
+            color: var(--primary-dark);
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            max-width: 800px;
+            margin: 0 0 15px;
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            line-height: 1.08;
+            letter-spacing: -2px;
+        }
+
+        .subtitle {
+            max-width: 760px;
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+        .deadline {
+            margin-top: 30px;
+            display: inline-flex;
+            flex-direction: column;
+            padding: 18px 22px;
+            border-left: 4px solid var(--primary);
+            background: var(--surface);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .deadline strong {
+            color: var(--primary-dark);
+            font-size: 1.05rem;
+        }
+
+        .deadline span {
+            color: var(--muted);
+            font-size: .9rem;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(255,255,255,.92);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav .container {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding: 10px 0;
+        }
+
+        nav a {
+            white-space: nowrap;
+            color: var(--muted);
+            text-decoration: none;
+            font-size: .85rem;
+            font-weight: 600;
+            padding: 8px 12px;
+            border-radius: 8px;
+        }
+
+        nav a:hover {
+            background: var(--surface-soft);
+            color: var(--primary-dark);
+        }
+
+        main {
+            padding: 55px 0 80px;
+        }
+
+        section {
+            margin-bottom: 60px;
+            scroll-margin-top: 75px;
+        }
+
+        h2 {
+            margin: 0 0 10px;
+            font-size: 1.8rem;
+            letter-spacing: -.6px;
+        }
+
+        .section-intro {
+            color: var(--muted);
+            margin: 0 0 25px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .grid.three {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            font-size: 1.08rem;
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        ul {
+            padding-left: 21px;
+            margin-bottom: 0;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        .number {
+            display: inline-flex;
+            width: 32px;
+            height: 32px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 13px;
+            border-radius: 9px;
+            background: var(--accent);
+            color: var(--primary-dark);
+            font-weight: 800;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 650px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 15px 18px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background: var(--surface-soft);
+            color: var(--primary-dark);
+            font-size: .9rem;
+        }
+
+        tr:last-child td {
+            border-bottom: 0;
+        }
+
+        .alert {
+            padding: 20px 22px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .alert.warning {
+            background: var(--warning);
+            color: var(--warning-text);
+        }
+
+        .alert.danger {
+            background: var(--danger);
+            color: var(--danger-text);
+        }
+
+        .alert strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .score {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .score:last-child {
+            border-bottom: 0;
+        }
+
+        .points {
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .flow {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 9px;
+            margin-top: 25px;
+        }
+
+        .step {
+            padding: 11px 15px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: .9rem;
+            box-shadow: var(--shadow);
+        }
+
+        .arrow {
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        .final-message {
+            padding: 28px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, #e4f2ec, #f5faf8);
+            border: 1px solid var(--border);
+        }
+
+        footer {
+            padding: 30px 0;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: .85rem;
+            text-align: center;
+        }
+
+        @media (max-width: 750px) {
+            header {
+                padding: 50px 0 40px;
+            }
+
+            h1 {
+                letter-spacing: -1px;
+            }
+
+            .grid,
+            .grid.three {
+                grid-template-columns: 1fr;
+            }
+
+            main {
+                padding-top: 40px;
+            }
+
+            section {
+                margin-bottom: 45px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <span class="tag">INOVA SENAI 2026 · ETAPA NACIONAL</span>
+
+        <h1>Guia de Inscrição</h1>
+
+        <p class="subtitle">
+            Resumo prático dos principais requisitos, documentos, critérios e etapas
+            para inscrever um Negócio Inovador na Mostra Inova SENAI 2026.
+        </p>
+
+        <div class="deadline">
+            <strong>Prazo: 21/08/2026 às 22h</strong>
+            <span>Submissão pela plataforma da SAGA SENAI de Inovação</span>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <div class="container">
+        <a href="#inscricao">Inscrição</a>
+        <a href="#equipe">Equipe</a>
+        <a href="#documentos">Documentos</a>
+        <a href="#desclassificacao">Desclassificação</a>
+        <a href="#avaliacao">Avaliação</a>
+        <a href="#fluxo">Fluxo</a>
+        <a href="#check">Checklist</a>
+    </div>
+</nav>
+
+<main>
+    <div class="container">
+
+        <section id="inscricao">
+            <h2>1. Inscrição</h2>
+            <p class="section-intro">
+                A inscrição precisa ser feita dentro do prazo e acompanhada de todos
+                os materiais obrigatórios.
+            </p>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>Prazo</h3>
+                    <p><strong>Até 22h do dia 21/08/2026.</strong></p>
+                </div>
+
+                <div class="card">
+                    <h3>Plataforma</h3>
+                    <p>plataforma.gpinovacao.senai.br</p>
+                </div>
+
+                <div class="card">
+                    <h3>Regra por equipe</h3>
+                    <p>Somente um negócio inovador pode ser inscrito por equipe.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Representante</h3>
+                    <p>
+                        Um aluno da equipe deve ser escolhido para inserir as informações
+                        do projeto e da equipe na plataforma.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="equipe">
+            <h2>2. Requisitos da equipe</h2>
+
+            <div class="card">
+                <ul>
+                    <li>A equipe deve ter <strong>2 a 5 alunos</strong>.</li>
+                    <li>Os alunos devem estar matriculados no SENAI ou ser egressos com até 2 anos de formação.</li>
+                    <li>São aceitos alunos de aprendizagem, qualificação, cursos técnicos ou graduação tecnológica.</li>
+                    <li>Cada aluno pode pertencer a apenas uma equipe.</li>
+                    <li>É obrigatória a indicação de um instrutor orientador.</li>
+                    <li>Podem existir no máximo 2 instrutores orientadores por equipe.</li>
+                    <li>Os alunos não podem ser colaboradores diretos ou indiretos do SENAI, exceto alunos estagiários.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="documentos">
+            <h2>3. Materiais obrigatórios</h2>
+            <p class="section-intro">
+                Estes são os itens que precisam acompanhar a inscrição.
+            </p>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Material</th>
+                            <th>Requisito principal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td>Protótipo de alta fidelidade</td>
+                            <td>Vídeo de até 2 minutos no YouTube</td>
+                        </tr>
+                        <tr>
+                            <td>02</td>
+                            <td>Business Model Canvas</td>
+                            <td>Modelo de negócio completo</td>
+                        </tr>
+                        <tr>
+                            <td>03</td>
+                            <td>Proposta de valor</td>
+                            <td>Problema, necessidade e valor entregue</td>
+                        </tr>
+                        <tr>
+                            <td>04</td>
+                            <td>Elevator Pitch</td>
+                            <td>Vídeo de até 3 minutos no YouTube</td>
+                        </tr>
+                        <tr>
+                            <td>05</td>
+                            <td>Proposta comercial</td>
+                            <td>Valores e descrição dos clientes</td>
+                        </tr>
+                        <tr>
+                            <td>06</td>
+                            <td>Viabilidade técnica e financeira</td>
+                            <td>Custos, desenvolvimento e viabilidade econômica</td>
+                        </tr>
+                        <tr>
+                            <td>07</td>
+                            <td>Análise de mercado</td>
+                            <td>Mercado, clientes, concorrentes e demanda</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>4. O que deve aparecer no projeto</h2>
+
+            <div class="grid three">
+                <div class="card">
+                    <span class="number">01</span>
+                    <h3>Problema</h3>
+                    <p>
+                        Explicar claramente qual problema está sendo resolvido,
+                        quem sofre com ele e qual é o tamanho do mercado.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <span class="number">02</span>
+                    <h3>Solução</h3>
+                    <p>
+                        Apresentar o produto, serviço ou processo, suas características,
+                        diferenciais e benefícios.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <span class="number">03</span>
+                    <h3>Inovação</h3>
+                    <p>
+                        Mostrar como a solução é diferente das existentes e por que
+                        é melhor ou mais atrativa.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <span class="number">04</span>
+                    <h3>Impacto</h3>
+                    <p>
+                        Demonstrar os resultados esperados e os possíveis impactos
+                        tecnológicos, econômicos, ambientais e sociais.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <span class="number">05</span>
+                    <h3>Viabilidade</h3>
+                    <p>
+                        Apresentar testes, pesquisas, custos operacionais, preço,
+                        margem e viabilidade econômica.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <span class="number">06</span>
+                    <h3>Mercado</h3>
+                    <p>
+                        Identificar clientes, consumidores, concorrentes, demanda
+                        potencial e barreiras de entrada.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="desclassificacao">
+            <h2>5. Atenção: desclassificação automática</h2>
+
+            <div class="alert danger">
+                <strong>Erros na inscrição podem eliminar o projeto.</strong>
+                Confira todos os dados, documentos e limites de duração antes de enviar.
+            </div>
+
+            <div class="card">
+                <ul>
+                    <li>Informações incompletas.</li>
+                    <li>Falta de documentos obrigatórios.</li>
+                    <li>Perfil dos participantes incompleto ou incorreto.</li>
+                    <li>Vídeo do protótipo com mais de <strong>2 minutos</strong>.</li>
+                    <li>Elevator Pitch com mais de <strong>3 minutos</strong>.</li>
+                    <li>Inscrição ou edição realizada por pessoa que não seja integrante da equipe.</li>
+                    <li>Descumprimento das demais regras do regulamento.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="avaliacao">
+            <h2>6. Como funciona a avaliação</h2>
+            <p class="section-intro">
+                A inscrição é apenas o início. Depois, o projeto passa por etapas de seleção.
+            </p>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>1ª Avaliação — 100 pontos</h3>
+
+                    <div class="score">
+                        <span>Business Model Canvas</span>
+                        <span class="points">25</span>
+                    </div>
+
+                    <div class="score">
+                        <span>Proposta de Valor</span>
+                        <span class="points">20</span>
+                    </div>
+
+                    <div class="score">
+                        <span>Elevator Pitch</span>
+                        <span class="points">30</span>
+                    </div>
+
+                    <div class="score">
+                        <span>Protótipo</span>
+                        <span class="points">25</span>
+                    </div>
+
+                    <p style="margin-top:15px;">
+                        O ranking é definido por estado. O primeiro colocado de cada
+                        unidade federativa precisa ter pelo menos 70 pontos.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>2ª Avaliação — 100 pontos</h3>
+
+                    <div class="score">
+                        <span>Proposta comercial</span>
+                        <span class="points">15</span>
+                    </div>
+
+                    <div class="score">
+                        <span>Análise de mercado</span>
+                        <span class="points">20</span>
+                    </div>
+
+                    <div class="score">
+                        <span>Viabilidade técnica e financeira</span>
+                        <span class="points">20</span>
+                    </div>
+
+                    <div class="score">
+                        <span>Elevator Pitch</span>
+                        <span class="points">30</span>
+                    </div>
+
+                    <div class="score">
+                        <span>Próximos passos</span>
+                        <span class="points">15</span>
+                    </div>
+
+                    <p style="margin-top:15px;">
+                        Os 30 negócios com melhores pontuações avançam para o Demo Day.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="fluxo">
+            <h2>7. Fluxo da competição</h2>
+
+            <div class="flow">
+                <span class="step">Inscrição</span>
+                <span class="arrow">→</span>
+                <span class="step">Seleção estadual</span>
+                <span class="arrow">→</span>
+                <span class="step">1ª avaliação</span>
+                <span class="arrow">→</span>
+                <span class="step">2ª avaliação</span>
+                <span class="arrow">→</span>
+                <span class="step">30 finalistas</span>
+                <span class="arrow">→</span>
+                <span class="step">Mentoria e aceleração</span>
+                <span class="arrow">→</span>
+                <span class="step">Demo Day</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>8. O que realmente importa</h2>
+
+            <div class="final-message">
+                <p>
+                    O INOVA SENAI não avalia somente se o protótipo funciona.
+                    O projeto precisa ser apresentado como um <strong>negócio inovador</strong>.
+                </p>
+
+                <p>
+                    Por isso, a equipe precisa conectar:
+                </p>
+
+                <p>
+                    <strong>Problema → Cliente → Solução → Diferencial → Protótipo
+                    → Mercado → Modelo de negócio → Preço → Viabilidade → Escala</strong>
+                </p>
+
+                <p style="margin-bottom:0;">
+                    A tecnologia é uma parte da solução. É necessário demonstrar
+                    também que existe um problema real, um cliente, um mercado e
+                    uma forma viável de transformar a solução em negócio.
+                </p>
+            </div>
+        </section>
+
+        <section id="check">
+            <h2>9. Checklist antes de enviar</h2>
+
+            <div class="card">
+                <ul style="list-style:none; padding-left:0;">
+                    <li>☐ Equipe possui de 2 a 5 alunos.</li>
+                    <li>☐ Orientador foi indicado.</li>
+                    <li>☐ Representante da equipe foi definido.</li>
+                    <li>☐ Protótipo está pronto.</li>
+                    <li>☐ Vídeo do protótipo possui no máximo 2 minutos.</li>
+                    <li>☐ Business Model Canvas está completo.</li>
+                    <li>☐ Proposta de valor está definida.</li>
+                    <li>☐ Elevator Pitch possui no máximo 3 minutos.</li>
+                    <li>☐ Proposta comercial está definida.</li>
+                    <li>☐ Viabilidade técnica e financeira foi elaborada.</li>
+                    <li>☐ Análise de mercado foi elaborada.</li>
+                    <li>☐ Vídeos estão publicados no YouTube.</li>
+                    <li>☐ Todos os links foram conferidos.</li>
+                    <li>☐ Perfil de todos os participantes está correto.</li>
+                    <li>☐ Todos os documentos obrigatórios estão anexados.</li>
+                    <li>☐ Inscrição será enviada antes das 22h de 21/08/2026.</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        INOVA SENAI 2026 · Guia baseado no Regulamento da Etapa Nacional
+    </div>
+</footer>
+
+</body>
+</html>
